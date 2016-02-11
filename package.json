@@ -1,0 +1,23 @@
+{
+  "name": "ionic-2-playground",
+  "version": "0.0.1",
+  "description": "Exploring Ionic 2",
+  "main": "index.js",
+  "dependencies": {
+    "ionic": "^2.0.0-beta.17"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/philipp-az/ionic-2-playground.git"
+  },
+  "author": "philipp killer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/philipp-az/ionic-2-playground/issues"
+  },
+  "homepage": "https://github.com/philipp-az/ionic-2-playground#readme"
+}git
