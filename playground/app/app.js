@@ -1,6 +1,7 @@
-import {App, Platform} from 'ionic/ionic';
+import {App, Platform, Page, NavController, NavParams} from 'ionic/ionic';
+
 import {Page1} from './pages/page1/page1';
-import {Page1} from './pages/page2/page2';
+import {Page2} from './pages/page2/page2';
 
 
 @App({
@@ -8,8 +9,17 @@ import {Page1} from './pages/page2/page2';
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
+
+  // injecting NavController throws following exception:
+  // "EXCEPTION: No provider for NavController! (MyApp -> NavController)"
   constructor(platform: Platform) {
+    // this.nav = nav;
+
     this.rootPage = Page1;
+
+    this.page1 = Page1;
+    this.page2 = Page2;
+
 
     platform.ready().then(() => {
       // The platform is now ready. Note: if this callback fails to fire, follow
@@ -30,7 +40,8 @@ export class MyApp {
   }
 
   openPage(page: Page) {
-    console.log('**', page);
-    this.rootPage = page;
+    console.log('*openPage*', page, Page1);
+
+    // this.nav.push(Page1);
   }
 }
