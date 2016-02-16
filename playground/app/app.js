@@ -1,5 +1,6 @@
 import {App, Platform} from 'ionic/ionic';
-import {TabsPage} from './pages/tabs/tabs';
+import {Page1} from './pages/page1/page1';
+import {Page1} from './pages/page2/page2';
 
 
 @App({
@@ -8,7 +9,7 @@ import {TabsPage} from './pages/tabs/tabs';
 })
 export class MyApp {
   constructor(platform: Platform) {
-    this.rootPage = TabsPage;
+    this.rootPage = Page1;
 
     platform.ready().then(() => {
       // The platform is now ready. Note: if this callback fails to fire, follow
@@ -26,5 +27,10 @@ export class MyApp {
       // good for dark backgrounds and light text:
       // StatusBar.setStyle(StatusBar.LIGHT_CONTENT)
     });
+  }
+
+  openPage(page: Page) {
+    console.log('**', page);
+    this.rootPage = page;
   }
 }
