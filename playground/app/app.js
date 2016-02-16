@@ -3,7 +3,7 @@ import {TabsPage} from './pages/tabs/tabs';
 
 
 @App({
-  template: '<ion-nav [root]="rootPage"></ion-nav>',
+  templateUrl: 'build/app.html',
   config: {} // http://ionicframework.com/docs/v2/api/config/Config/
 })
 export class MyApp {
