@@ -1,12 +1,24 @@
 import {App, Platform, Page, NavController, NavParams} from 'ionic/ionic';
+import {Component} from 'angular2/core';
 
 import {Page1} from './pages/page1/page1';
-import {Page2} from './pages/page2/page2';
+
+
+@Component({
+  selector: 'my-component',
+  template: '<p>MY COMPONENT</p>'
+})
+class MyComp {
+  constructor() {
+
+  }
+}
 
 
 @App({
   templateUrl: 'build/app.html',
-  config: {} // http://ionicframework.com/docs/v2/api/config/Config/
+  config: {},
+  directives: [MyComp]
 })
 export class MyApp {
 
@@ -16,9 +28,6 @@ export class MyApp {
     // this.nav = nav;
 
     this.rootPage = Page1;
-
-    this.page1 = Page1;
-    this.page2 = Page2;
 
 
     platform.ready().then(() => {
@@ -39,9 +48,4 @@ export class MyApp {
     });
   }
 
-  openPage(page: Page) {
-    console.log('*openPage*', page, Page1);
-
-    // this.nav.push(Page1);
-  }
 }
